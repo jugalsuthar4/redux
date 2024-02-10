@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Editor directories and files
+.vscode/
+.idea/
+
+# Dependency directories
+.jenkins/
+.pnpm/
+.npm/
+.lock-wscript
+.lock-staging
+.lock-rebuild
+.config.js
+shrinkwrap.yaml
+package-lock.json
+yarn.lock
+
+# Production build output
+dist/
+
+# dotenv environment variable files
+.env
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Sensitive or high-churn files
+config.js
