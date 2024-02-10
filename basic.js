@@ -1,6 +1,7 @@
-import { createStore } from "redux";
+import { createStore ,applyMiddleware} from "redux";
+import  loggerr from 'redux-logger'
 
-
+const logger=loggerr.createLogger()
 const initialState={
     numOfCakes:10
 }
@@ -23,16 +24,16 @@ const reducer=(state=initialState,action)=>{
 }
 
 
-const store=createStore(reducer);
+const store=createStore(reducer,applyMiddleware(logger));
 console.log("initail state is ",store.getState())
-const unsubscribe=store.subscribe(()=>{
-    console.log("updated state is ",store.getState())
-})
+// const unsubscribe=store.subscribe(()=>{
+//     console.log("updated state is ",store.getState())
+// })
 store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyCake())
-unsubscribe();
+// unsubscribe();
 store.dispatch(buyCake())
 
 
